@@ -2,11 +2,18 @@ import React from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-const HeaderLink = ({ link, SVG, text }) => {
+import './HeaderLink.scss';
+
+const HeaderLink = ({ link, svg, text, isBordered }) => {
   return (
-    <NavLink to={link}>
-      <SVG height={20} width={20} style={{ fill: "#fff" }} />
-      <span>{text}</span>
+    <NavLink
+     to={link} 
+     className={`header-link ${isBordered ? "header-link--outlined" : ""}`} activeClassName="header-link--active"
+    >
+      {svg && <div className="header-link__image-container">
+        <img width="20" height="20" src={svg} alt="" />
+      </div>}
+      <span className="header-link__text">{text}</span>
     </NavLink>
   )
 }

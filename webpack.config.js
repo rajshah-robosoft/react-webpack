@@ -1,50 +1,36 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
-  entry: path.join(__dirname, 'src', 'index.js'),
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'index.bundle.js'
-  },
-  mode: process.env.NODE_ENV || 'development',
-  resolve: { modules: [path.resolve(__dirname, 'src'), 'node_modules'] },
-  devServer: {
+module.exports = { 
+  entry: path.join(__dirname, 'src', 'index.js'), 
+  output: { 
+    path: path.join(__dirname, 'build'), 
+    filename: 'index.bundle.js' 
+  }, 
+  mode: process.env.NODE_ENV || 'development', 
+  resolve: { modules: [path.resolve(__dirname, 'src'), 'node_modules'] }, 
+  devServer: { 
     contentBase: path.join(__dirname, 'src'),
     historyApiFallback: true,
-  },
-  module: {
+  }, 
+  module: { 
     rules: [
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: "babel-loader"
-          },
-          {
-            loader: "react-svg-loader",
-            options: {
-              jsx: true
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(js|jsx)$/,
+      { 
+        test: /\.(js|jsx)$/,        
         exclude: /node_modules/,
         use: ['babel-loader']
-      },
-      {
-        test: /\.(css|scss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
-      },
-      {
-        test: /\.(jpg|jpeg|png|gif|mp3)$/,
+      },      
+      {        
+        test: /\.(css|scss)$/,        
+        use: ["style-loader", "css-loader", "sass-loader"]      
+      },      
+      {        
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
         loaders: ['file-loader']
       }
-    ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') })
+    ]  
+  },  
+  plugins: [    
+    new HtmlWebpackPlugin({ template: path.join(__dirname,'src','index.html')})  
   ]
 };
