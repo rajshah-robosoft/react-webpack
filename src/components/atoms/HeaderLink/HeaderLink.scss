@@ -4,15 +4,22 @@
   $this: &;
 
   &__image-container {
-    padding: 0.5rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 0.5rem;
   }
 
   &--outlined {
+    text-align: center;
     border: 1px solid #fff;
     border-radius: 4px;
     padding: 1rem;
     padding: 0.625rem;
+
+    .header-link__text {
+      width: 100%;
+    }
   }
 
   &--active {

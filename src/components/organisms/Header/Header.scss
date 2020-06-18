@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__logo {
+    margin-right: 1.5rem;
+  }
+
+  &__center-links {
+    min-width: 650px;
+    flex-grow: 1;
+  }
+
+  &__right-links {
+    min-width: 305px;
+  }
+}

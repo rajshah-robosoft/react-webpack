@@ -1,0 +1,13 @@
+.episode-card {
+  $this: &;
+
+  &__body {
+    padding-top: 0.4rem;
+  }
+
+  &:hover {
+    #{$this}__body {
+      background-color: #000;
+    }
+  }
+}

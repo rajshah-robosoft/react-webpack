@@ -12,27 +12,27 @@ const HeaderLinkCosmos = () => {
   return (
     <BrowserRouter>
       <Route path="/" component={() => <div></div>} exact />
-      <div style={{ backgroundColor: "#000", padding: 20 }}>
+      <div style={{ padding: 20 }}>
         <HeaderLink
           link="/"
           text="Home"
           svg={HomeSVG}
         />
       </div>
-      <div style={{ backgroundColor: "#000", padding: 20 }}>
+      <div style={{ padding: 20 }}>
         <HeaderLink
           link="/random"
           text="Random"
           svg={HomeSVG}
         />
       </div>
-      <div style={{ backgroundColor: "#000", padding: 20 }}>
+      <div style={{ padding: 20 }}>
         <HeaderLink
           link="/sign-in"
           text="Already a member?"
         />
       </div>
-      <div style={{ backgroundColor: "#000", padding: 20 }}>
+      <div style={{ padding: 20 }}>
         <HeaderLink
           link="/sign-up"
           text="Sign up"

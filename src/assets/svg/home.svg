@@ -1,1 +1,14 @@
-<svg id="Layer_1" style="fill: #fff" enable-background="new 0 0 511.995 511.995" height="512" viewBox="0 0 511.995 511.995" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m507.308 236.641-198.98-198.99c-28.86-28.85-75.8-28.85-104.66 0l-198.98 198.99c-6.25 6.25-6.25 16.38 0 22.63 6.24 6.25 16.38 6.25 22.62 0l12.69-12.69v203.4c0 25.405 20.595 46 46 46h80c5.523 0 10-4.477 10-10v-148c0-27.614 22.386-50 50-50h60c27.614 0 50 22.386 50 50v148c0 5.523 4.477 10 10 10h80c25.405 0 46-20.595 46-46v-203.4l12.69 12.69c3.12 3.12 7.22 4.69 11.31 4.69s8.19-1.57 11.31-4.69c6.25-6.25 6.25-16.38 0-22.63z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <path id="prefix__a" d="M6.713.062c-.098-.083-.237-.083-.336 0L.105 5.298c-.066.055-.105.14-.105.23v8.727c0 .16.122.29.273.29h5.045v-3.097h2.455v3.097h5.045c.151 0 .273-.13.273-.29V5.527c0-.09-.039-.174-.105-.229L6.713.062z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(9.255 8.927)">
+        <mask id="prefix__b" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <path stroke="#FFF" stroke-width="1.8" d="M.9 5.941v7.704h3.518v-3.097h4.255v3.097h3.518V5.807L6.55 1.098.9 5.941z"/>
+        <g fill="#FFF" mask="url(#prefix__b)">
+            <path d="M0 0H28.8V29.091H0z" transform="translate(-7.855 -7.273)"/>
+        </g>
+    </g>
+</svg>

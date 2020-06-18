@@ -11,7 +11,7 @@ const HeaderLink = ({ link, svg, text, isBordered }) => {
      className={`header-link ${isBordered ? "header-link--outlined" : ""}`} activeClassName="header-link--active"
     >
       {svg && <div className="header-link__image-container">
-        <img width="20" height="20" src={svg} alt="" />
+        <img width="30" height="30" src={svg} alt="" />
       </div>}
       <span className="header-link__text">{text}</span>
     </NavLink>

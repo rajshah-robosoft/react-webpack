@@ -1,14 +1,15 @@
 import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import Header from '../../components/organisms/Header/Header';
-import EpisodeRail from '../../components/organisms/EpisodeRail/EpisodeRail';
+import EpisodeRail from './EpisodeRail';
 
-// image
-import HeroIMG from '../../assets/images/hero/hero.jpeg';
-import TlcIMG from '../../assets/svg/tlc_small.svg'
-import EpisodeIMG from '../../assets/images/aitplane_episode.png'
+// css
+import '../../../bootstrap.scss';
 
-const Home = () => {
+import TlcIMG from '../../../assets/svg/tlc_small.svg'
+import EpisodeIMG from '../../../assets/images/aitplane_episode.png'
+
+const EpisodeRailCosmos = () => {
   const railList = [
     {
       channel: TlcIMG,
@@ -48,18 +49,16 @@ const Home = () => {
   ]
 
   return (
-    <>
-      <div>
-        <Header />
-        <img width="100%" height="900" src={HeroIMG} alt="" style={{ objectFit: "contain", objectPosition: "top" }} />
-
+    <BrowserRouter>
+      <Route path="/" component={() => <div></div>} exact />
+      <div style={{ padding: 20 }}>
         <EpisodeRail
           headerText="Continue Watching"
           railList={railList}
         />
       </div>
-    </>
+    </BrowserRouter>
   )
 }
 
-export default Home;
+export default EpisodeRailCosmos
