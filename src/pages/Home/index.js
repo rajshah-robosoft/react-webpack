@@ -1,10 +1,9 @@
 import React from "react";
 
 import Header from "../../components/organisms/Header/Header";
-import EpisodeRail from "../../components/organisms/EpisodeRail/EpisodeRail";
-import SeriesRail from "../../components/organisms/SeriesRail/SeriesRail";
-import NetworkRail from "../../components/organisms/NetworkRail/NetworkRail";
-import PlaylistRail from "../../components/organisms/PlaylistRail/PlaylistRail";
+import Rail from "../../components/organisms/Rail/Rail";
+import Hero from "../../components/organisms/Hero/Hero";
+import SubHeader from "../../components/organisms/SubHeader/SubHeader";
 
 // image
 import HeroIMG from "../../assets/images/hero/hero.jpeg";
@@ -13,6 +12,7 @@ import EpisodeIMG from "../../assets/images/aitplane_episode.png";
 import SeriesIMG from "../../assets/images/series.png";
 import NetworkIMG from "../../assets/images/discovery_circle.png";
 import PlaylistIMG from "../../assets/images/playlist_tile.png";
+import HeroTitleImage from "../../assets/images/guys-grocery-games.png";
 
 const Home = () => {
   const episodesRailList = [
@@ -168,27 +168,40 @@ const Home = () => {
 
   return (
     <>
-      <div>
-        <Header />
-        <img
-          width="100%"
-          height="900"
-          src={HeroIMG}
-          alt=""
-          style={{ objectFit: "contain", objectPosition: "top" }}
+      <Header />
+      <SubHeader />
+      <main>
+        <Hero
+          bgImg={HeroIMG}
+          image={HeroTitleImage}
+          primaryText="Messaging to get the user to watch that can span 2 lines instead of a series description!"
+          secendoryText="For lovers of Adventure and Nature."
         />
-
-        <EpisodeRail
-          headerText="Continue Watching"
-          railList={episodesRailList}
-        />
-
-        <SeriesRail headerText="My stuff" railList={seriesRailList} />
-
-        <NetworkRail headerText="Networks" railList={networkRailList} />
-
-        <PlaylistRail headerText="Playlist" railList={playlistRailList} />
-      </div>
+        <section className="mt-2">
+          <Rail
+            type="episode"
+            headerText="Continue Watching"
+            railList={episodesRailList}
+          />
+        </section>
+        <section className="mt-2">
+          <Rail type="series" headerText="My stuff" railList={seriesRailList} />
+        </section>
+        <section className="mt-2">
+          <Rail
+            type="network"
+            headerText="Networks"
+            railList={networkRailList}
+          />
+        </section>
+        <section className="mt-2">
+          <Rail
+            type="playlist"
+            headerText="Playlist"
+            railList={playlistRailList}
+          />
+        </section>
+      </main>
     </>
   );
 };

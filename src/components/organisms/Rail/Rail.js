@@ -1,17 +1,18 @@
 import React from "react";
 
-import "./Rail.scss";
 import Text from "../../atoms/Text/Text";
 
 import PlaylistCard from "../../molecules/PlaylistCard/PlaylistCard";
 import NetworkCard from "../../molecules/NetworkCard/NetworkCard";
-import EpisodeRail from "../../molecules/EpisodeCard";
+import EpisodeCard from "../../molecules/EpisodeCard/EpisodeCard";
 import SeriesCard from "../../molecules/SeriesCard/SeriesCard";
+
+import "./Rail.scss";
 
 const Rail = ({ headerText, railList, type }) => {
   let renderRails =
     railList && Array.isArray(railList)
-      ? railList.forEach((item, index) => {
+      ? railList.map((item, index) => {
           switch (type) {
             case "playlist":
               return <PlaylistCard {...item} key={index} />;
@@ -20,7 +21,7 @@ const Rail = ({ headerText, railList, type }) => {
               return <NetworkCard {...item} key={index} />;
 
             case "episode":
-              return <EpisodeRail {...item} key={index} />;
+              return <EpisodeCard {...item} key={index} />;
 
             case "series":
               return <SeriesCard {...item} key={index} />;

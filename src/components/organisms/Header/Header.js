@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "../../molecules/Logo/Logo";
-import HeaderLinkList from "../../molecules/HeaderLinkList/HeaderLinkList";
+import HeaderLink from "../../molecules/HeaderLink/HeaderLink";
 
 // images
 import HomeIMG from "../../../assets/svg/home.svg";
@@ -49,17 +49,21 @@ const Header = () => {
   ];
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="header__logo">
         <Logo />
       </div>
       <div className="header__center-links">
-        <HeaderLinkList list={list} />
+        {list.map((item, index) => (
+          <HeaderLink {...item} key={index} />
+        ))}
       </div>
       <div className="header__right-links">
-        <HeaderLinkList list={list2} />
+        {list2.map((item, index) => (
+          <HeaderLink {...item} key={index} />
+        ))}
       </div>
-    </div>
+    </header>
   );
 };
 

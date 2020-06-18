@@ -1,0 +1,23 @@
+.sub-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+  top: 4rem;
+  margin: 0 2rem;
+  left: 0;
+  right: 0;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  & > * {
+    margin-right: 2rem;
+  }
+
+  .header-link--active {
+    border-bottom: 2px solid #fff;
+  }
+}
