@@ -5,9 +5,20 @@
     padding-top: 0.4rem;
   }
 
-  &:hover {
-    #{$this}__body {
-      background-color: #000;
-    }
+  &__body-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  &__image {
+    border-radius: 4px;
+  }
+
+  // &:hover {
+  //   #{$this}__body {
+  //     background-color: #000;
+  //   }
+  // }
 }

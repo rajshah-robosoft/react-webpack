@@ -1,22 +1,27 @@
-import React from 'react'
+import React from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import CardTitle from '../../atoms/CardTitle/CardTitle';
+import Image from "../../atoms/Image/Image";
 
-import './SeriesCard.scss';
+import "./SeriesCard.scss";
+import Text from "../../atoms/Text/Text";
 
-const SeriesCard = ({ showLink, text, channel }) => {
+const SeriesCard = ({ seriesLink, text, channel, seriesImage }) => {
   return (
-    <Link to={showLink} className="series-card">
-      <img width="100%" src={episodeImage} alt="" className="series-card__image" />
-      <CardTitle
-        text={text}
-        channel={channel}
+    <Link to={seriesLink} className="series-card">
+      <Image
+        width="100%"
+        src={seriesImage}
+        alt=""
+        className="series-card__image"
       />
-      
+      <div className="series-card__body-title">
+        <Text label={text} weight="bold" fontSize="sm" />
+        <Image height="18" src={channel} alt="" />
+      </div>
     </Link>
-  )
-}
+  );
+};
 
-export default SeriesCard
+export default SeriesCard;

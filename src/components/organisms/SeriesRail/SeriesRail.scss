@@ -1,4 +1,4 @@
-.episode-rails {
+.series-rails {
   &__header {
     margin-bottom: 1rem;
   }
@@ -13,7 +13,7 @@
     }
 
     @media (min-width: 900px) {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(8, 1fr);
     }
   }
 }

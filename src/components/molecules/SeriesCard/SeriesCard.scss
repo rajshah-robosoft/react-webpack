@@ -1,5 +1,13 @@
 .series-card {
   &__image {
     margin-bottom: 0.4rem;
+    border-radius: 4px;
+  }
+
+  &__body-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }

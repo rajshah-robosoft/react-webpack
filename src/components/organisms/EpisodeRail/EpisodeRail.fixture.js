@@ -1,16 +1,16 @@
-import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
-import EpisodeRail from './EpisodeRail';
+import EpisodeRail from "./EpisodeRail";
 
 // css
-import '../../../bootstrap.scss';
+import "../../../bootstrap.scss";
 
-import TlcIMG from '../../../assets/svg/tlc_small.svg'
-import EpisodeIMG from '../../../assets/images/aitplane_episode.png'
+import TlcIMG from "../../../assets/svg/tlc_small.svg";
+import EpisodeIMG from "../../../assets/images/aitplane_episode.png";
 
 const EpisodeRailCosmos = () => {
-  const railList = [
+  const episodeRailList = [
     {
       channel: TlcIMG,
       text: "Series Title",
@@ -45,8 +45,8 @@ const EpisodeRailCosmos = () => {
       episodeImage: EpisodeIMG,
       episodeText: "S1 E5 - Episode Title",
       episodeLink: "/",
-    }
-  ]
+    },
+  ];
 
   return (
     <BrowserRouter>
@@ -54,11 +54,11 @@ const EpisodeRailCosmos = () => {
       <div style={{ padding: 20 }}>
         <EpisodeRail
           headerText="Continue Watching"
-          railList={railList}
+          railList={episodeRailList}
         />
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default EpisodeRailCosmos
+export default EpisodeRailCosmos;

@@ -1,28 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import CardTitle from '../../atoms/CardTitle/CardTitle';
-import EpisodeTitle from '../../atoms/EpisodeTitle/EpisodeTitle';
+import Text from "../../atoms/Text/Text";
+import Image from "../../atoms/Image/Image";
 
-import './EpisodeCard.scss';
+import "./EpisodeCard.scss";
 
-const EpisodeCard = ({ text, channel, episodeText, episodeImage, episodeLink }) => {
+const EpisodeCard = ({
+  text,
+  channel,
+  episodeText,
+  episodeImage,
+  episodeLink,
+}) => {
   return (
     <Link to={episodeLink}>
       <div className="episode-card">
-        <img width="100%" src={episodeImage} alt="" className="episode-card__image" />
+        <Image
+          width="100%"
+          src={episodeImage}
+          alt=""
+          className="episode-card__image"
+        />
         <div className="episode-card__body">
-          <CardTitle
-            text={text}
-            channel={channel}
-          />
-          <EpisodeTitle
-            text={episodeText}
-          />
+          <div className="episode-card__body-title">
+            <Text label={text} weight="bold" fontSize="sm" />
+            <Image src={channel} alt="" height="18" />
+          </div>
+          <Text label={episodeText} color="lightgray" fontSize="sm" />
         </div>
       </div>
     </Link>
-  )
-}
+  );
+};
 
 export default EpisodeCard;
