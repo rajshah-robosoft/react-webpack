@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeaderLink from "../../molecules/HeaderLink/HeaderLink";
+import NavigationLink from "../../molecules/NavigationLink/NavigationLink";
 
 // css
 import "./SubHeader.scss";
@@ -28,7 +28,7 @@ const SubHeader = () => {
   return (
     <header className="sub-header">
       {list.map((item, index) => (
-        <HeaderLink size="xl" {...item} key={index} />
+        <NavigationLink size="xl" {...item} key={index} />
       ))}
     </header>
   );

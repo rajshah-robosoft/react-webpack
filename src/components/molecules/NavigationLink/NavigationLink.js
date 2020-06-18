@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 import Image from "../../atoms/Image/Image";
 import Text from "../../atoms/Text/Text";
 
-import "./HeaderLink.scss";
+import "./NavigationLink.scss";
 
-const HeaderLink = ({ link, svg, text, isBordered, size }) => {
+const NavigationLink = ({ link, svg, text, isBordered, size }) => {
   return (
     <NavLink
       to={link}
@@ -24,4 +24,4 @@ const HeaderLink = ({ link, svg, text, isBordered, size }) => {
   );
 };
 
-export default HeaderLink;
+export default NavigationLink;

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "../../molecules/Logo/Logo";
-import HeaderLink from "../../molecules/HeaderLink/HeaderLink";
+import NavigationLink from "../../molecules/NavigationLink/NavigationLink";
 
 // images
 import HomeIMG from "../../../assets/svg/home.svg";
@@ -55,12 +55,12 @@ const Header = () => {
       </div>
       <div className="header__center-links">
         {list.map((item, index) => (
-          <HeaderLink {...item} key={index} />
+          <NavigationLink {...item} key={index} />
         ))}
       </div>
       <div className="header__right-links">
         {list2.map((item, index) => (
-          <HeaderLink {...item} key={index} />
+          <NavigationLink {...item} key={index} />
         ))}
       </div>
     </header>
