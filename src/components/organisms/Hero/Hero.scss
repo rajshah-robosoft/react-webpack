@@ -8,6 +8,10 @@
   flex-direction: column;
   justify-content: center;
 
+  button {
+    max-width: 150px;
+  }
+
   & > * {
     margin-left: 3.5rem;
     max-width: 28.125rem;

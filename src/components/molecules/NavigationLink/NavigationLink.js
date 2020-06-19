@@ -7,7 +7,7 @@ import Text from "../../atoms/Text/Text";
 
 import "./NavigationLink.scss";
 
-const NavigationLink = ({ link, svg, text, isBordered, size }) => {
+const NavigationLink = ({ link, svg, text, isBordered, size, color }) => {
   return (
     <NavLink
       to={link}
@@ -19,7 +19,11 @@ const NavigationLink = ({ link, svg, text, isBordered, size }) => {
           <Image width="30" height="30" src={svg} alt="" />
         </div>
       )}
-      <Text label={text} fontSize={size ? size : "sm"} />
+      <Text
+        label={text}
+        fontSize={size ? size : "sm"}
+        color={color ? color : "white"}
+      />
     </NavLink>
   );
 };

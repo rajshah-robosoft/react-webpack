@@ -13,6 +13,7 @@ import SeriesIMG from "../../assets/images/series.png";
 import NetworkIMG from "../../assets/images/discovery_circle.png";
 import PlaylistIMG from "../../assets/images/playlist_tile.png";
 import HeroTitleImage from "../../assets/images/guys-grocery-games.png";
+import Footer from "../../components/organisms/Footer/Footer";
 
 const Home = () => {
   const episodesRailList = [
@@ -202,6 +203,7 @@ const Home = () => {
           />
         </section>
       </main>
+      <Footer className="mt-2" />
     </>
   );
 };
