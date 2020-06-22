@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import HeroIMG from "../../../assets/images/hero/hero.jpeg";
 import HeroTitleImage from "../../../assets/images/guys-grocery-games.png";

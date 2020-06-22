@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import Logo from "../../molecules/Logo/Logo";
 import Text from "../../atoms/Text/Text";

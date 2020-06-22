@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import LogoIMG from "../../../assets/images/logo.png";
 import Image from "../../atoms/Image/Image";
