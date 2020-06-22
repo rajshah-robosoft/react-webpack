@@ -3,12 +3,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import Image from "../../atoms/Image/Image";
-import Text, { textWeightType } from "../../atoms/Text/Text";
+import Text, {
+  textWeightType,
+  textSizeType,
+  textColorType,
+} from "../../atoms/Text/Text";
 
 import "./CustomNavigationLink.scss";
-
-// interface
-import { textSizeType, textColorType } from "../../atoms/Text/Text";
 
 export interface CustomNavigationLinkInterface {
   link: string;
