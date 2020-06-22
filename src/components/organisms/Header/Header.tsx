@@ -1,7 +1,9 @@
 import React from "react";
 
 import Logo from "../../molecules/Logo/Logo";
-import NavigationLink from "../../molecules/NavigationLink/NavigationLink";
+import CustomNavigationLink, {
+  CustomNavigationLinkInterface,
+} from "../../molecules/CustomNavigationLink/CustomNavigationLink";
 
 // images
 import HomeIMG from "../../../assets/svg/home.svg";
@@ -13,7 +15,7 @@ import BrowseIMG from "../../../assets/svg/browse.svg";
 import "./Header.scss";
 
 const Header = () => {
-  const list = [
+  const list: CustomNavigationLinkInterface[] = [
     {
       link: "/",
       text: "Home",
@@ -36,7 +38,7 @@ const Header = () => {
     },
   ];
 
-  const list2 = [
+  const list2: CustomNavigationLinkInterface[] = [
     {
       link: "/sign-in",
       text: "Already have account?",
@@ -55,12 +57,12 @@ const Header = () => {
       </div>
       <div className="header__center-links">
         {list.map((item, index) => (
-          <NavigationLink {...item} key={index} />
+          <CustomNavigationLink {...item} key={index} />
         ))}
       </div>
       <div className="header__right-links">
         {list2.map((item, index) => (
-          <NavigationLink {...item} key={index} />
+          <CustomNavigationLink {...item} key={index} />
         ))}
       </div>
     </header>

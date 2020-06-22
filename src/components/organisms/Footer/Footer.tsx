@@ -2,7 +2,9 @@ import React from "react";
 
 import Logo from "../../molecules/Logo/Logo";
 import Text from "../../atoms/Text/Text";
-import NavigationLink from "../../molecules/NavigationLink/NavigationLink";
+import CustomNavigationLink, {
+  CustomNavigationLinkInterface,
+} from "../../molecules/CustomNavigationLink/CustomNavigationLink";
 import Image from "../../atoms/Image/Image";
 
 // images
@@ -10,8 +12,12 @@ import FBIMG from "../../../assets/svg/facebook.svg";
 
 import "./Footer.scss";
 
-const Footer = ({ className }) => {
-  const list = [
+export interface FooterInterface {
+  className?: string;
+}
+
+const Footer = ({ className }: FooterInterface) => {
+  const list: CustomNavigationLinkInterface[] = [
     {
       link: "/",
       text: "About",
@@ -58,7 +64,12 @@ const Footer = ({ className }) => {
     <footer className={`footer ${className}`}>
       <div className="footer__head">
         {list.map((item, index) => (
-          <NavigationLink color="lightgray" size="base" {...item} key={index} />
+          <CustomNavigationLink
+            color="lightgray"
+            size="base"
+            {...item}
+            key={index}
+          />
         ))}
       </div>
       <div className="footer__bottom">
@@ -90,7 +101,7 @@ const Footer = ({ className }) => {
         </div>
         <div>
           <Text
-            label="Copyright © 2020 Discovery Digital Ventures, LLC"
+            textLabel="Copyright © 2020 Discovery Digital Ventures, LLC"
             fontSize="xs"
             color="lightgray"
           />

@@ -2,30 +2,30 @@ import React from "react";
 
 import { BrowserRouter, Route } from "react-router-dom";
 
-import NavigationLink from "./NavigationLink";
+import CustomNavigationLink from "./CustomNavigationLink";
 
 import HomeSVG from "../../../assets/svg/home.svg";
 
 import "../../../bootstrap.scss";
 
-const NavigationLinkCosmos = () => {
+const CustomNavigationLinkCosmos = () => {
   return (
     <BrowserRouter>
       <Route path="/" component={() => <div></div>} exact />
       <div style={{ padding: 20 }}>
-        <NavigationLink link="/" text="Home" svg={HomeSVG} />
+        <CustomNavigationLink link="/" text="Home" svg={HomeSVG} />
       </div>
       <div style={{ padding: 20 }}>
-        <NavigationLink link="/random" text="Random" svg={HomeSVG} />
+        <CustomNavigationLink link="/random" text="Random" svg={HomeSVG} />
       </div>
       <div style={{ padding: 20 }}>
-        <NavigationLink link="/sign-in" text="Already a member?" />
+        <CustomNavigationLink link="/sign-in" text="Already a member?" />
       </div>
       <div style={{ padding: 20 }}>
-        <NavigationLink link="/sign-up" text="Sign up" isBordered />
+        <CustomNavigationLink link="/sign-up" text="Sign up" isBordered />
       </div>
     </BrowserRouter>
   );
 };
 
-export default NavigationLinkCosmos;
+export default CustomNavigationLinkCosmos;

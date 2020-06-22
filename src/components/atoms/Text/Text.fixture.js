@@ -8,18 +8,18 @@ import "../../../bootstrap.scss";
 const TextCosmos = () => {
   return (
     <div style={{ padding: 20 }}>
-      <Text label="xs" fontSize="xs" />
-      <Text label="sm" fontSize="sm" />
-      <Text label="base" />
-      <Text label="md" fontSize="md" />
-      <Text label="lg" fontSize="lg" />
-      <Text label="xl" fontSize="xl" />
-      <Text label="white" fontSize="xl" />
-      <Text label="gray" fontSize="xl" color="gray" />
-      <Text label="lightgray" fontSize="xl" color="lightgray" />
-      <Text label="bold" fontSize="xl" weight="bold" />
+      <Text textLabel="xs" fontSize="xs" />
+      <Text textLabel="sm" fontSize="sm" />
+      <Text textLabel="base" />
+      <Text textLabel="md" fontSize="md" />
+      <Text textLabel="lg" fontSize="lg" />
+      <Text textLabel="xl" fontSize="xl" />
+      <Text textLabel="white" fontSize="xl" />
+      <Text textLabel="gray" fontSize="xl" color="gray" />
+      <Text textLabel="lightgray" fontSize="xl" color="lightgray" />
+      <Text textLabel="bold" fontSize="xl" weight="bold" />
       <Text
-        label="lightgray bold"
+        textLabel="lightgray bold"
         fontSize="xl"
         color="lightgray"
         weight="bold"

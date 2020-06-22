@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 
 import Image from "../../atoms/Image/Image";
 
-const PlaylistCard = ({ playlistLink, playlistImage }) => {
+export interface PlaylistCardInterface {
+  playlistLink: string;
+  playlistImage: string;
+}
+
+const PlaylistCard = ({
+  playlistLink,
+  playlistImage,
+}: PlaylistCardInterface) => {
   return (
     <Link to={playlistLink}>
       <Image width="100%" src={playlistImage} alt="" />

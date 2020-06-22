@@ -7,7 +7,19 @@ import Image from "../../atoms/Image/Image";
 import "./SeriesCard.scss";
 import Text from "../../atoms/Text/Text";
 
-const SeriesCard = ({ seriesLink, text, channel, seriesImage }) => {
+export interface SeriesCardInterface {
+  seriesLink: string;
+  text: string;
+  channel: string;
+  seriesImage: string;
+}
+
+const SeriesCard = ({
+  seriesLink,
+  text,
+  channel,
+  seriesImage,
+}: SeriesCardInterface) => {
   return (
     <Link to={seriesLink} className="series-card">
       <Image
@@ -17,7 +29,7 @@ const SeriesCard = ({ seriesLink, text, channel, seriesImage }) => {
         className="series-card__image"
       />
       <div className="series-card__body-title">
-        <Text label={text} weight="bold" fontSize="sm" />
+        <Text textLabel={text} weight="bold" fontSize="sm" />
         <Image height="18" src={channel} alt="" />
       </div>
     </Link>

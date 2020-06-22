@@ -1,12 +1,14 @@
 import React from "react";
 
-import NavigationLink from "../../molecules/NavigationLink/NavigationLink";
+import CustomNavigationLink, {
+  CustomNavigationLinkInterface,
+} from "../../molecules/CustomNavigationLink/CustomNavigationLink";
 
 // css
 import "./SubHeader.scss";
 
 const SubHeader = () => {
-  const list = [
+  const list: CustomNavigationLinkInterface[] = [
     {
       link: "/",
       text: "Custom",
@@ -28,7 +30,7 @@ const SubHeader = () => {
   return (
     <header className="sub-header">
       {list.map((item, index) => (
-        <NavigationLink size="xl" {...item} key={index} />
+        <CustomNavigationLink size="xl" {...item} key={index} />
       ))}
     </header>
   );

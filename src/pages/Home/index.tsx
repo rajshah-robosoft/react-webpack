@@ -1,9 +1,10 @@
-import React from "react";
+import * as React from "react";
 
 import Header from "../../components/organisms/Header/Header";
 import Rail from "../../components/organisms/Rail/Rail";
 import Hero from "../../components/organisms/Hero/Hero";
 import SubHeader from "../../components/organisms/SubHeader/SubHeader";
+import Footer from "../../components/organisms/Footer/Footer";
 
 // image
 import HeroIMG from "../../assets/images/hero/hero.jpeg";
@@ -13,10 +14,16 @@ import SeriesIMG from "../../assets/images/series.png";
 import NetworkIMG from "../../assets/images/discovery_circle.png";
 import PlaylistIMG from "../../assets/images/playlist_tile.png";
 import HeroTitleImage from "../../assets/images/guys-grocery-games.png";
-import Footer from "../../components/organisms/Footer/Footer";
+
+// Interface
+import { EpisodeCardInterface } from "../../components/molecules/EpisodeCard/EpisodeCard";
+import { SeriesCardInterface } from "../../components/molecules/SeriesCard/SeriesCard";
+import { PlaylistCardInterface } from "../../components/molecules/PlaylistCard/PlaylistCard";
+import { NetworkCardInterface } from "../../components/molecules/NetworkCard/NetworkCard";
 
 const Home = () => {
-  const episodesRailList = [
+  console.log(HeroIMG);
+  const episodesRailList: EpisodeCardInterface[] = [
     {
       channel: TlcIMG,
       text: "Series Title",
@@ -54,7 +61,7 @@ const Home = () => {
     },
   ];
 
-  const seriesRailList = [
+  const seriesRailList: SeriesCardInterface[] = [
     {
       channel: TlcIMG,
       text: "Series Title",
@@ -105,7 +112,7 @@ const Home = () => {
     },
   ];
 
-  const networkRailList = [
+  const networkRailList: NetworkCardInterface[] = [
     {
       networkImage: NetworkIMG,
       networkLink: "/",
@@ -140,7 +147,7 @@ const Home = () => {
     },
   ];
 
-  const playlistRailList = [
+  const playlistRailList: PlaylistCardInterface[] = [
     {
       playlistImage: PlaylistIMG,
       playlistLink: "/",
@@ -177,6 +184,7 @@ const Home = () => {
           image={HeroTitleImage}
           primaryText="Messaging to get the user to watch that can span 2 lines instead of a series description!"
           secendoryText="For lovers of Adventure and Nature."
+          className=""
         />
         <section className="mt-2">
           <Rail

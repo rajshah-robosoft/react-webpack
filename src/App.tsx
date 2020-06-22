@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import * as React from "react";
 
 // Routing
 import { createHashHistory } from "history";
@@ -10,16 +10,16 @@ import { ROUTES } from "./routes";
 // Creating hash routing
 const hist = createHashHistory();
 
-const App = (_) => {
+const App = () => {
   let renderRoute = ROUTES.map((item, index) => (
     <Route {...item} key={index} />
   ));
 
   return (
     <Router history={hist}>
-      <Suspense fallback="Loading ...">
+      <React.Suspense fallback="Loading ...">
         <Switch>{renderRoute}</Switch>
-      </Suspense>
+      </React.Suspense>
     </Router>
   );
 };

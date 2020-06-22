@@ -6,13 +6,21 @@ import Image from "../../atoms/Image/Image";
 
 import "./EpisodeCard.scss";
 
+export interface EpisodeCardInterface {
+  text: string;
+  channel: string;
+  episodeText: string;
+  episodeImage: string;
+  episodeLink: string;
+}
+
 const EpisodeCard = ({
   text,
   channel,
   episodeText,
   episodeImage,
   episodeLink,
-}) => {
+}: EpisodeCardInterface) => {
   return (
     <Link to={episodeLink}>
       <div className="episode-card">
@@ -24,10 +32,10 @@ const EpisodeCard = ({
         />
         <div className="episode-card__body">
           <div className="episode-card__body-title">
-            <Text label={text} weight="bold" fontSize="sm" />
+            <Text textLabel={text} weight="bold" fontSize="sm" />
             <Image src={channel} alt="" height="18" />
           </div>
-          <Text label={episodeText} color="lightgray" fontSize="sm" />
+          <Text textLabel={episodeText} color="lightgray" fontSize="sm" />
         </div>
       </div>
     </Link>
