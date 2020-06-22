@@ -8,9 +8,10 @@ import EpisodeIMG from "../../../assets/images/aitplane_episode.png";
 
 // css
 import "../../../bootstrap.scss";
+import { EpisodeCardInterface } from "../../molecules/EpisodeCard/EpisodeCard";
 
 const RailCosmos = () => {
-  const episodesRailList = [
+  const episodesRailList: EpisodeCardInterface[] = [
     {
       channel: TlcIMG,
       text: "Series Title",

@@ -1,20 +1,20 @@
-import React from 'react'
+import React from "react";
 
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from "react-router-dom";
 
-import EpisodeCard from './EpisodeCard';
+import EpisodeCard from "./EpisodeCard";
 
-import TlcIMG from '../../../assets/svg/tlc_small.svg'
-import EpisodeIMG from '../../../assets/images/aitplane_episode.png'
+import TlcIMG from "../../../assets/svg/tlc_small.svg";
+import EpisodeIMG from "../../../assets/images/aitplane_episode.png";
 
-import '../../../bootstrap.scss'
+import "../../../bootstrap.scss";
 
 const EpisodeCardCosmos = () => {
   return (
     <BrowserRouter>
       <Route path="/" component={() => <div></div>} exact />
       <div style={{ padding: 20, width: 285 }}>
-        <EpisodeCard 
+        <EpisodeCard
           channel={TlcIMG}
           text="Series Title"
           episodeImage={EpisodeIMG}
@@ -23,7 +23,7 @@ const EpisodeCardCosmos = () => {
         />
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default EpisodeCardCosmos
+export default EpisodeCardCosmos;

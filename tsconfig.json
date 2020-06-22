@@ -12,5 +12,5 @@
     "allowJs": true
   },
   "include": ["./*.ts", "./src/**/*"],
-  "exclude": ["./node_modules/", "./src/**/*.test.js", "./src/**/*.fixture.js"]
+  "exclude": ["./node_modules/", "./src/**/*.test.js"]
 }
